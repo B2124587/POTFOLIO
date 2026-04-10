@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg:#dde0eb;
+      --card:#9b6666;
+      --text:#1e293b;
+      --accent:#d33773;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family: Inter, Arial, sans-serif; color: var(--text); background: var(--bg); line-height:1.6; }
+    .container { width:min(1100px, 94%); margin:0 auto; padding:1.5rem 0; }
+    header { padding:1.5rem 0; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; }
+    header h1 { font-size:2rem; color: var(--accent); }
+    .nav { gap:0.8rem; display:flex; flex-wrap:wrap; }
+    .nav a { text-decoration:none; color: var(--text); font-weight:600; }
+    .hero { background:var(--card); border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); padding:1.5rem; margin-bottom:1rem; display:grid; grid-template-columns: auto 1fr; gap:1rem; align-items:center; }
+    .profile-photo { width:150px; height:150px; border-radius:50%; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.15); border:3px solid var(--accent); }
+    .profile-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+    .hero-content h2 { margin-bottom:0.35rem; }
+    section { margin-bottom:1rem; }
+    .grid { display:grid; gap:1rem; }
+    .card { background:var(--card); border-radius:10px; padding:1rem; box-shadow:0 6px 15px rgba(0,0,0,0.08); }
+    .card h3 { margin-bottom:0.5rem; color: var(--accent); }
+    .project-grid { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+    .skills-list, .project-list { list-style:none; display:grid; gap:0.5rem; }
+    .skills-list li, .project-list li { background:#3fa36c; padding:0.45rem 0.7rem; border-radius:7px; }
+    footer { text-align:center; padding:1rem 0; font-size:0.9rem; color:#475569; }
+    @media (max-width:720px) {
+      header { flex-direction:column; align-items:flex-start; }
+      .hero { grid-template-columns:1fr; text-align:center; }
+      .profile-photo { margin:0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BEYAR BILONDA </h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="about">
+      <div class="profile-photo">
+        <img src="image/IMG-20251111-WA0019.jpg" alt="Profile photo of BEYAR BILONDA" />
+      </div>
+      <div class="hero-content">
+        <h2>About Me</h2>
+        <p>I am a Front-end developer creating high-quality web experiences. I build responsive, accessible, user-focused sites using modern HTML, CSS, and JavaScript.</p>
+        <p>Location: COPPERBELT UNIVERSITY, KITWE-ZM • Email: beyarfaith@gmail.com</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React</li>
+        <li>Responsive Design</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid project-grid">
+        <article class="card">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio with project case studies and interactive UI. Built with vanilla HTML/CSS/JS.</p>
+          <p><strong>Highlights:</strong> mobile-first, animations, dynamic filters.</p>
+        </article>
+        <article class="card">
+          <h3>Task Manager App</h3>
+          <p>React app for creating/editing tasks, with filtering by category and local storage persistence.</p>
+          <p><strong>Highlights:</strong> state hooks, modular components, accessible forms.</p>
+        </article>
+        <article class="card">
+          <h3>E-Commerce Landing</h3>
+          <p>Responsive storefront landing page with interactive product cards and smooth scroll sections.</p>
+          <p><strong>Highlights:</strong> CSS grid, transitions, SEO metadata.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Interested in working together? Reach out below:</p>
+        <ul class="project-list">
+          <li>Email: beyarfaith@gmail.com</li>
+          <li>LinkedIn: linkedin.com/in/janedoe</li>
+          <li>GitHub: github.com/janedoe</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 BEYAR BILONDA. Built with HTML & CSS.
+    </footer>
+  </div>
+</body>
+</html>
+EOF
